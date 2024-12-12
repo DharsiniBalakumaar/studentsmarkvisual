@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './login.css';
+import config from './config';
+
 
 function Login() {
     const [rollno, setRollno] = useState('');
@@ -15,7 +17,7 @@ function Login() {
         // Reset the error message before each attempt
         setErrorMessage('');
 
-        axios.post('http://localhost:3001/stulogin', { rollno, password })
+        axios.post(`${config.BASE_API_URL}/stulogin`, { rollno, password })
             .then(result => {
                 console.log(result.data);
                 const res = result.data;
