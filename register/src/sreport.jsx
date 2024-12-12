@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "./sreport.css";
+import config from './config';
+
 
 function StudentDetails() {
   const [studentData, setStudentData] = useState(null);

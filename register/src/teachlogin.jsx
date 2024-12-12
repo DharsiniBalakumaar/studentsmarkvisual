@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './home.css';
+import config from './config';
+
 
 function Login() {
     const [teachid, setTeachid] = useState('');

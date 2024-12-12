@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './entryMark.css';
+import config from './config';
+
 
 const StudentMarksSheet = () => {
   const [semester, setSemester] = useState('sem1'); // Default semester is 'sem1'
