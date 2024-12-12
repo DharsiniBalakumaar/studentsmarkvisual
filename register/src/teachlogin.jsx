@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
         setErrorMessage(''); // Reset error message on new submit attempt
 
-        axios.post('http://localhost:3001/techlogin', { teachid, password })
+        axios.post(`${config.BASE_API_URL}/techlogin`, { teachid, password })
             .then(result => {
                 const res = result.data;
                 const name = res.name ? res.name.toUpperCase() : '';

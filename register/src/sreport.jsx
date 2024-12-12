@@ -18,7 +18,7 @@ function StudentDetails() {
       }
 
       try {
-        const response = await axios.get(`http://localhost:3001/stulogin/${rollno}`);
+        const response = await axios.get(`${config.BASE_API_URL}/stulogin/${rollno}`);
         setStudentData(response.data); // Store the fetched data in state
       } catch (error) {
         console.error("Error occurred:", error);
