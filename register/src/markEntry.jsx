@@ -12,7 +12,7 @@ const StudentMarksSheet = () => {
     }
     console.log({ obj })
     // Send the updated student data to the backend
-    fetch('http://localhost:3001/studentmarks/save', {
+    fetch(`${config.BASE_API_URL}/studentmarks/save`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

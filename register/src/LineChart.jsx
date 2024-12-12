@@ -22,7 +22,7 @@ const LineChart = () => {
     console.log("rollno:", rollno);
 
     // Fetch marks for the logged-in student
-    fetch(`http://localhost:3001/stulogin/${rollno}`)
+    fetch(`${config.BASE_API_URL}/stulogin/${rollno}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
