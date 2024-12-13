@@ -47,7 +47,7 @@ const StudentMarksSheet = () => {
 
   // Fetch student data whenever the semester changes
   useEffect(() => {
-    fetch(`http://localhost:3001/studentmarks/${semester}`)
+    fetch(`${config.BASE_API_URL}/studentmarks/${semester}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch student data");
